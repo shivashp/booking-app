@@ -33,7 +33,7 @@ class PhoneSection extends React.Component {
     ):null;
     return (
       <View style={[global.COMMON.container, {backgroundColor: 'black'}]}>
-        <Animatable.View animation="fadeOut" delay={1000} style={styles.overlay}></Animatable.View>
+        <Animatable.View animation="fadeOut" delay={600} style={styles.overlay}></Animatable.View>
         <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
           {backButton}
           <View style={global.COMMON.centerView}>

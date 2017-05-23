@@ -4,13 +4,15 @@ import {
 } from 'react-native';
 import * as global from '../styles/global';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {Actions} from 'react-native-router-flux'
 
 class PhoneProfile extends React.Component {
+
   render () {
     return(
       <Image
         source={{uri: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg'}}
-        style={[global.COMMON.container,{width:'100%', height:undefined}]}
+        style={[global.COMMON.container,{width:'100%'}]}
         >
         <View style={styles.overlay}></View>
         <View style={styles.topSection}>
@@ -19,7 +21,7 @@ class PhoneProfile extends React.Component {
           </Text>
         </View>
         <View style={styles.bottomSection}>
-          <TouchableOpacity style={[styles.roundButton,styles.btnRed]}>
+          <TouchableOpacity style={[styles.roundButton,styles.btnRed]} onPress={() => Actions.app()}>
             <Icon style={global.COMMON.icon} name="ios-close" />
           </TouchableOpacity>
           <TouchableOpacity style={styles.roundButton}>

@@ -4,12 +4,16 @@ import {
 } from 'react-native';
 import * as global from '../styles/global';
 import * as Animatable from 'react-native-animatable';
+import {Actions} from 'react-native-router-flux'
 
 class Contact extends React.Component {
-  render(props) {    
+  _onPress() {    
+    Actions.call();
+  }
+  render(props) {
     return(
       <Animatable.View animation="fadeIn">
-        <TouchableOpacity style={global.COMMON.person}>
+        <TouchableOpacity style={global.COMMON.person} onPress={this._onPress}>
           <Image
             style={{height:50, width:50, borderRadius:25}}
             source={{ uri: this.props.image }}
