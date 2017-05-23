@@ -35,6 +35,28 @@ export const COMMON = {
     textAlign:'center',
     color:'white',
     fontSize:37
+  },
+  blackOverlay: {
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    paddingHorizontal:20,
+    position:'absolute',
+    bottom:0,
+    left:0,
+    width:'100%',
+    height:150
+  },
+  contactList: {
+    flex:1,
+    borderBottomWidth:0.5,
+    borderColor:'#ccc',
+  },
+  companyList: {
+    flex:1,
+  },
+  person: {
+    marginTop:12,
+    maxWidth:150,
+    marginRight: 15
   }
 
 }

@@ -3,6 +3,7 @@ import {
   View, Text
 } from 'react-native';
 import PhoneSection from './components/PhoneSection';
+import MessageSection from './components/MessageSection';
 import Swiper from 'react-native-swiper';
 
 
@@ -11,7 +12,7 @@ class App extends React.Component {
     return (
       <Swiper showsPagination={false}>
         <PhoneSection />
-        <PhoneSection />
+        <MessageSection />
       </Swiper>
     )
   }
