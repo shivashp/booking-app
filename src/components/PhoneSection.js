@@ -5,6 +5,7 @@ import {
 import * as global from '../styles/global';
 import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
+import Menu from './Menu';
 
 class PhoneSection extends React.Component {
   constructor() {
@@ -45,53 +46,6 @@ class PhoneSection extends React.Component {
       </View>
     )
   }
-}
-
-const Menu = () => (
-  <Animatable.View animation="slideInUp" duration={100} style={global.COMMON.blackOverlay}>
-    <ScrollView style={global.COMMON.contactList} horizontal={true} showsHorizontalScrollIndicator={false}>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/mlane/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg"/>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/jina/128.jpg"/>
-
-    </ScrollView>
-    <ScrollView style={global.COMMON.companyList} horizontal={true} showsHorizontalScrollIndicator={false}>
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/jollynutlet/128.jpg" />
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/getsocial_now/128.jpg" />
-      <Contact image="https://s3.amazonaws.com/uifaces/faces/twitter/ekvium/128.jpg" />
-      <Contact image="http://postashio.com/wp-content/uploads/2015/10/royal-dutch-shell-logo.jpg" />
-      <Contact image="http://postashio.com/wp-content/uploads/2015/10/bp-logo.jpg" />
-      <Contact image="http://postashio.com/wp-content/uploads/2015/10/total-logo.jpg" />
-      <Contact image="http://postashio.com/wp-content/uploads/2015/10/ge-logo.jpg" />
-      <Contact image="http://postashio.com/wp-content/uploads/2015/10/hon-hai-precision-logo.jpg" />
-    </ScrollView>
-  </Animatable.View>
-)
-
-class Contact extends React.PureComponent {
-  render(props) {
-    return(
-      <Animatable.View animation="fadeIn">
-        <TouchableOpacity style={global.COMMON.person}>
-          <Image
-            style={{height:50, width:50, borderRadius:25}}
-            source={{ uri: this.props.image }}
-          />
-      </TouchableOpacity>
-    </Animatable.View>
-    )
-  }
-}
-
-Contact.defaultProps = {
-  name: 'Shiva Pandey',
-  image: 'https://scontent.fktm3-1.fna.fbcdn.net/v/t1.0-1/p32x32/17883545_1743147219045689_6617885352823046601_n.jpg?oh=e118bdbfb8a190dfb9ffe216528e700e&oe=59BB7B8C'
 }
 
 const styles = StyleSheet.create({

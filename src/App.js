@@ -10,7 +10,7 @@ import Swiper from 'react-native-swiper';
 class App extends React.Component {
   render () {
     return (
-      <Swiper showsPagination={false}>
+      <Swiper showsPagination={false} loop={false}>
         <PhoneSection />
         <MessageSection />
       </Swiper>

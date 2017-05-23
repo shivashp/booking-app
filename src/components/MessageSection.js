@@ -1,24 +1,46 @@
 import React, { PropTypes } from 'react'
 import {
-  View, Text, StyleSheet, TouchableOpacity
+  View, Text, StyleSheet, TouchableOpacity, Image, ScrollView
 } from 'react-native'
 import * as global from '../styles/global';
 import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
+import Menu from './Menu';
 
 class MessageSection extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      active: false
+    }
+  }
+  _onPress() {
+    this.setState({active: true})
+  }
+  _onBackButtonPressed() {
+    this.setState({active: false})
+  }
   render () {
-    return(
+    var buttonSection = (this.state.active)?(<Menu />):(
+      <TouchableOpacity style={global.COMMON.button} onPress={this._onPress.bind(this)}>
+          <Icon style={global.COMMON.icon} name="ios-chatbubbles-outline" />
+      </TouchableOpacity>
+    )
+    var backButton = (this.state.active)?(
+      <TouchableOpacity style={global.COMMON.navView} onPress={this._onBackButtonPressed.bind(this)}>
+        <Icon style={[global.COMMON.icon, {color:'white', textAlign: 'left', paddingLeft:20, paddingTop:25}]} name="ios-arrow-round-back" />
+      </TouchableOpacity>
+    ):null;
+    return (
       <View style={[global.COMMON.container, {backgroundColor: 'black'}]}>
         <Animatable.View animation="fadeOut" delay={1000} style={styles.overlay}></Animatable.View>
         <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
+          {backButton}
           <View style={global.COMMON.centerView}>
-            <Animatable.Text animation="fadeOut" delay={700} style={global.COMMON.centerText}>Place a call to Contacts and Service Providers</Animatable.Text>
+            <Animatable.Text animation="fadeOut" delay={1400} style={global.COMMON.centerText}>Place a call to Contacts and Service Providers</Animatable.Text>
           </View>
           <View style={global.COMMON.bottomSection}>
-            <TouchableOpacity style={global.COMMON.button}>
-                <Icon style={global.COMMON.icon} name="ios-chatbubbles-outline" />
-            </TouchableOpacity>
+            {buttonSection}
           </View>
         </View>
       </View>
