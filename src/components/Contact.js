@@ -7,13 +7,17 @@ import * as Animatable from 'react-native-animatable';
 import {Actions} from 'react-native-router-flux'
 
 class Contact extends React.Component {
-  _onPress() {    
-    Actions.call();
+  _onPress() {
+    if(this.props.onPress) {
+      this.props.onPress();
+    } else {
+      Actions.call();
+    }
   }
   render(props) {
     return(
       <Animatable.View animation="fadeIn">
-        <TouchableOpacity style={global.COMMON.person} onPress={this._onPress}>
+        <TouchableOpacity style={global.COMMON.person} onPress={this._onPress.bind(this)}>
           <Image
             style={{height:50, width:50, borderRadius:25}}
             source={{ uri: this.props.image }}

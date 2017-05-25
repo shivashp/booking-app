@@ -9,15 +9,15 @@ import React, { Component } from 'react';
 import {
   AppRegistry, StatusBar, View
 } from 'react-native';
-// import Root from './src/Root';
-import App from './src/App';
+import Root from './src/Root';
+// import App from './src/App';
 
 export default class Roomie extends Component {
   render() {
     return (
       <View style={{flex:1}}>
         <StatusBar hidden={true} />
-        <App />
+        <Root />
       </View>
     );
   }

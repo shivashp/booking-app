@@ -6,6 +6,7 @@ import * as global from '../styles/global';
 import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import Menu from './Menu';
+import {Actions } from 'react-native-router-flux';
 
 class MessageSection extends React.Component {
   constructor() {
@@ -21,9 +22,9 @@ class MessageSection extends React.Component {
     this.setState({active: false})
   }
   render () {
-    var buttonSection = (this.state.active)?(<Menu />):(
+    var buttonSection = (this.state.active)?(<Menu onPress={() => Actions.gallery()}/>):(
       <TouchableOpacity style={global.COMMON.button} onPress={this._onPress.bind(this)}>
-          <Icon style={global.COMMON.icon} name="ios-chatbubbles-outline" />
+          <Icon style={global.COMMON.icon} name="ios-images" />
       </TouchableOpacity>
     )
     var backButton = (this.state.active)?(
