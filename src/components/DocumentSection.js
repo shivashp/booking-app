@@ -6,13 +6,13 @@ import * as global from '../styles/global';
 import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import Menu from './Menu';
-import {Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
-class MessageSection extends React.Component {
-  constructor(props) {
+class DocumentSection extends React.Component {
+  constructor() {
     super();
     this.state = {
-      active: false,
+      active: false
     }
   }
   _onPress() {
@@ -21,10 +21,10 @@ class MessageSection extends React.Component {
   _onBackButtonPressed() {
     this.setState({active: false})
   }
-  render (props) {
-    var buttonSection = (this.state.active)?(<Menu onPress={() => Actions.gallery()}/>):(
+  render () {
+    var buttonSection = (this.state.active)?(<Menu onPress={() => console.log("Pressed")}/>):(
       <TouchableOpacity style={global.COMMON.button} onPress={this._onPress.bind(this)}>
-          <Icon style={global.COMMON.icon} name="ios-images" />
+          <Icon style={global.COMMON.icon} name="ios-document-outline" />
       </TouchableOpacity>
     )
     var backButton = (this.state.active)?(
@@ -34,11 +34,11 @@ class MessageSection extends React.Component {
     ):null;
     return (
       <View style={[global.COMMON.container, {backgroundColor: 'black'}]}>
-        <Animatable.View animation="fadeOut" delay={1000} style={styles.overlay}></Animatable.View>
+        <Animatable.View animation="fadeOut" delay={600} style={styles.overlay}></Animatable.View>
         <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
           {backButton}
           <View style={global.COMMON.centerView}>
-            <Animatable.Text  animation="fadeOut" duration={1500} style={global.COMMON.centerText}>Send a Photo/Video to contacts</Animatable.Text>
+            <Animatable.Text animation="fadeOut" delay={1400} style={global.COMMON.centerText}>Scan and Share Docs</Animatable.Text>
           </View>
           <View style={global.COMMON.bottomSection}>
             {buttonSection}
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default MessageSection;
+export default DocumentSection;

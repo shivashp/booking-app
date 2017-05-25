@@ -89,7 +89,7 @@ class Gallery extends React.Component {
     return (
       <View style={[global.COMMON.container, {backgroundColor: '#333'}]}>
         <View style={styles.topbar}>
-          <TouchableOpacity style={global.COMMON.navView} onPress={() => Actions.app()}>
+          <TouchableOpacity style={global.COMMON.navView} onPress={() => Actions.pop()}>
             <Icon style={[global.COMMON.icon, {color:'white', textAlign: 'left', marginTop:-7}]} name="ios-arrow-round-back" />
           </TouchableOpacity>
           <View style={{flex:1}}>
