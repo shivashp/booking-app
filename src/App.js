@@ -15,12 +15,9 @@ class App extends React.Component {
       active: 0
     }
   }
-  _onMomentumScrollEnd(e, state, context) {    
-    this.setState({active: state.index})
-  }
   render () {
     return (
-      <Swiper showsPagination={false} loop={false} onMomentumScrollEnd ={this._onMomentumScrollEnd.bind(this)}>
+      <Swiper showsPagination={false} loop={false}>
         <PhoneSection active={(this.state.active === 0)}/>
         <MessageSection active={(this.state.active === 1)}/>
         <DocumentSection active={(this.state.active === 2)}/>

@@ -5,6 +5,7 @@ import PhoneProfile from './components/PhoneProfile';
 import MessageSection from './components/MessageSection';
 import PhoneSection from './components/PhoneSection';
 import Gallery from './components/Gallery';
+import SendMessage from './components/SendMessage';
 
 const Root = () => {
   return (
@@ -14,6 +15,7 @@ const Root = () => {
       <Scene key="phone" component={PhoneSection} title="Phone Section"/>
       <Scene key="message" component={MessageSection} title="Message Section"/>
       <Scene key="call" component={PhoneProfile} title="Calling"/>
+      <Scene key="sendMessage" component={SendMessage} title="SendMessage" />
     </Router>
   )
 }

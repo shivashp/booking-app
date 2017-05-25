@@ -32,7 +32,7 @@ var data = [
   },
   {
     id: 5,
-    uri: 'https://s-media-cache-ak0.pinimg.com/originals/fa/19/2c/fa192ca170d4862522af87a7aa20b9f0.png',
+    uri: 'http://www.dnakids.co.uk/uploads/images/party-images/uv-glow-party-2.jpg',
   },
   {
     id: 6,
@@ -107,10 +107,10 @@ class Gallery extends React.Component {
     )
   }
   renderRow(rowData) {
-    return <TouchableOpacity style={styles.card}>
+    return <TouchableOpacity style={styles.card} onPress={Actions.sendMessage}>
               <Animatable.View animation="fadeInUp" duration={700}>
                 <Image
-                  style={{width:(width / 2) - 15, height:160,}}
+                  style={{width:(width / 2), height:160,}}
                   source={{uri: rowData.uri}}
                   />
               </ Animatable.View>
@@ -153,10 +153,8 @@ const styles = StyleSheet.create({
     paddingBottom:70
   },
   card: {
-    width: (width / 2) - 15,
+    width: (width / 2),
     height: 160,
-    marginLeft: 10,
-    marginTop: 10
   }
 })
 
