@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import Menu from './Menu';
 import { Actions } from 'react-native-router-flux';
+import Camera from 'react-native-camera';
 
 class PhoneSection extends React.Component {
   constructor() {
@@ -33,18 +34,22 @@ class PhoneSection extends React.Component {
       </TouchableOpacity>
     ):null;
     return (
-      <View style={[global.COMMON.container, {backgroundColor: 'black'}]}>
-        <Animatable.View animation="fadeOut" delay={600} style={styles.overlay}></Animatable.View>
+      <Camera
+          ref={(cam) => {
+            this.camera = cam;
+          }}
+          style={global.COMMON.container}
+          aspect={Camera.constants.Aspect.fill}>
         <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
           {backButton}
           <View style={global.COMMON.centerView}>
-            <Animatable.Text animation="fadeOut" delay={1400} style={global.COMMON.centerText}>Place a call to Contacts and Service Providers</Animatable.Text>
+            <Animatable.Text animation="fadeOut" delay={2000} style={[global.COMMON.centerText, {color: 'white'}]}>Place a call to Contacts and Service Providers</Animatable.Text>
           </View>
           <View style={global.COMMON.bottomSection}>
             {buttonSection}
           </View>
         </View>
-      </View>
+      </Camera>
     )
   }
 }

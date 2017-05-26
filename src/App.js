@@ -17,9 +17,9 @@ class App extends React.Component {
   }
   render () {
     return (
-      <Swiper showsPagination={false} loop={false}>
-        <PhoneSection active={(this.state.active === 0)}/>
+      <Swiper showsPagination={false} loop={false} index={1}>
         <MessageSection active={(this.state.active === 1)}/>
+        <PhoneSection active={(this.state.active === 0)}/>
         <DocumentSection active={(this.state.active === 2)}/>
       </Swiper>
     )

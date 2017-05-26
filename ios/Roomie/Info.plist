@@ -66,5 +66,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+    <string>We need your beautiful camera</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We're only saving to temp, promise</string>
+
 </dict>
 </plist>

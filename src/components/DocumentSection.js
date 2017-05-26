@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import Menu from './Menu';
 import { Actions } from 'react-native-router-flux';
+import Camera from 'react-native-camera';
 
 class DocumentSection extends React.Component {
   constructor() {
