@@ -2908,6 +2908,14 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-animatable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.2.0.tgz#fd279c6ee4b49161c6cc3b951ed7765b35a73467"
+
+react-native-camera@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-0.9.0.tgz#5d89b6e5769d94d59f9b7248096b3fb930fc4bfb"
+
 react-native-experimental-navigation@0.26.x:
   version "0.26.12"
   resolved "https://registry.yarnpkg.com/react-native-experimental-navigation/-/react-native-experimental-navigation-0.26.12.tgz#8b458757178b06908b3e8fe7042458332e8e4825"
@@ -2926,6 +2934,10 @@ react-native-router-flux@3.38.0:
     react-native-experimental-navigation "0.26.x"
     react-native-tabs "^1.0.9"
     react-static-container "1.0.1"
+
+react-native-swiper@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/react-native-swiper/-/react-native-swiper-1.5.4.tgz#a85535b5374ef8d605a7a720e447ac46816ac448"
 
 react-native-tabs@^1.0.9:
   version "1.0.9"
