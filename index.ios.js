@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import Root from './src/Root';
 
-
 export default class Roomie extends Component {
   render() {
     return (

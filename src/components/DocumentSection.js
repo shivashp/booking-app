@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import Menu from './Menu';
 import { Actions } from 'react-native-router-flux';
-import Camera from 'react-native-camera';
 
 class DocumentSection extends React.Component {
   constructor() {
@@ -34,7 +33,7 @@ class DocumentSection extends React.Component {
       </TouchableOpacity>
     ):null;
     return (
-      <View style={[global.COMMON.container, {backgroundColor: 'black'}]}>
+      <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
         <Animatable.View animation="fadeOut" delay={600} style={styles.overlay}></Animatable.View>
         <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
           {backButton}

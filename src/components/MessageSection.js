@@ -33,8 +33,6 @@ class MessageSection extends React.Component {
       </TouchableOpacity>
     ):null;
     return (
-      <View style={[global.COMMON.container, {backgroundColor: 'black'}]}>
-        <Animatable.View animation="fadeOut" delay={1000} style={styles.overlay}></Animatable.View>
         <View style={[global.COMMON.container, {backgroundColor: 'transparent'}]}>
           {backButton}
           <View style={global.COMMON.centerView}>
@@ -43,8 +41,7 @@ class MessageSection extends React.Component {
           <View style={global.COMMON.bottomSection}>
             {buttonSection}
           </View>
-        </View>
-      </View>
+        </View>      
     )
   }
 }
